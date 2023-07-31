@@ -1,0 +1,68 @@
+using System;
+namespace Oop_lec2_part2
+{
+    class Employee
+    {
+        int id;
+        string name;
+        int salary;
+        public Employee()
+        {
+            id=1;
+            name="un known";
+            salary=1000;
+        }
+         public Employee(int i)
+        {
+            id=i;
+            name="un known";
+            salary=1000;
+        }
+         public Employee(int i, string name)
+        {
+            id=i;
+            this.name=name;
+            salary=1000;
+        }
+         public Employee(int i,string name,int salary)
+        {
+            id=i;
+            this.name=name;
+            this.salary=salary;
+        }
+        public int ID//الفانكشن دي مش موجوده في الجافا ولا السي بلاس بلاس
+        {
+            set{id = value;}//عشان اعرف احط قيمه للid       
+            get{return id;}//عشان اعرف استعد القيمه دي
+        }
+        public int Salary
+        {
+            set{salary= value;}
+            get{return salary;}
+        }
+        public string Name
+        {
+            set{name = value;}
+            get{return name;}
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee ob=new Employee();
+           ob.ID=111;
+           ob.Name="Shrouk";
+           ob.Salary=5000;
+           Console.WriteLine(ob.Name+", "+ob.ID+" ,"+ob.Salary);
+           Employee ob1=new Employee();
+           Employee ob2=new Employee(111);
+           Employee ob3=new Employee(222,"Shrouk");
+           Employee ob4=new Employee(333,"Shahd",5000);
+           Console.WriteLine(ob1.Name+", "+ob1.ID+" ,"+ob1.Salary);
+           Console.WriteLine(ob2.Name+", "+ob2.ID+" ,"+ob2.Salary);
+           Console.WriteLine(ob3.Name+", "+ob3.ID+" ,"+ob3.Salary);
+           Console.WriteLine(ob4.Name+", "+ob4.ID+" ,"+ob4.Salary);
+        }
+    }
+}
