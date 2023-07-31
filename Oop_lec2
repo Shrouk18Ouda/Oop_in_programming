@@ -1,0 +1,36 @@
+using System;
+namespace Oop_lec2_part2
+{
+    class Employee
+    {
+        int id;
+        string name;
+        int salary;
+        public int ID//الفانكشن دي مش موجوده في الجافا ولا السي بلاس بلاس
+        {
+            set{id = value;}//عشان اعرف احط قيمه للid       
+            get{return id;}//عشان اعرف استعد القيمه دي
+        }
+        public int Salary//اختصار للافانكشن بتاعت set&&get
+        {
+            set{salary= value;}
+            get{return salary;}
+        }
+        public string Name
+        {
+            set{name = value;}
+            get{return name;}
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee ob=new Employee();
+           ob.ID=111;
+           ob.Name="Shrouk";
+           ob.Salary=5000;
+           Console.WriteLine(ob.Name+", "+ob.ID+" ,"+ob.Salary);
+        }
+    }
+}
