@@ -1,0 +1,84 @@
+//task1 in oop
+using System;
+namespace Oop_lec1
+{
+ class My_math
+ {
+ public static int Sum(int x,int y)
+ {
+ int sum=x+y;
+ return sum;
+ }
+ public static int Sub(int x,int y)
+ {
+ int sub=x-y;
+ return sub;
+ }
+ public static int Mul(int x,int y)
+ {
+ int mul=x*y;
+ return mul;
+ }
+ public static int Div(int x,int y)
+ {
+ int div=x/y;
+ return div;
+ }
+ public static int Rem(int x,int y)
+ {
+ int rem=x%y;
+ return rem;
+ }
+ public static int Pow(int x,int y)
+ {
+ int p=1,i; 
+ for(i=0;i<y;i++)
+ {
+ p*=x;
+ }
+ return p;
+ }
+ }
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ string sh="T";
+ while(sh=="T")
+ {
+ Console.Write("Enter First Number: ");
+ int a= int.Parse(Console.ReadLine());
+ Console.Write("Enter Operation: ");
+ string ch=Console.ReadLine();
+ Console.Write("Enter Second Number: ");
+ int b= int.Parse(Console.ReadLine());
+ if(ch=="+")
+ {
+ Console.Write(My_math.Sum(a,b));
+ }
+ else if(ch=="-")
+ {
+ Console.Write(My_math.Sub(a,b));
+ }
+ else if(ch=="*")
+ {
+ Console.Write(My_math.Mul(a,b));
+ }
+ else if(ch=="%")
+ {
+ Console.Write(My_math.Rem(a,b));
+ }
+ else if(ch=="/")
+ {
+ Console.Write(My_math.Div(a,b));
+ }
+ else if(ch=="^")
+ {
+ Console.Write(My_math.Pow(a,b));
+ }
+ Console.Write("\nAnother Operatipon? ");
+ sh=Console.ReadLine();
+ }
+ }
+ }
+}
