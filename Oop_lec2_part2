@@ -1,0 +1,62 @@
+using System;
+namespace Oop_lec2_part2
+{
+    class Employee
+    {
+        int id;
+        string name;
+        int salary;
+        public void Set_id(int i)
+        {
+            id=i;
+        }
+        public void Set_salary(int s)
+        {
+            salary=s;
+        }
+        public void Set_name(string n)
+        {
+            name=n;
+        }
+        public void inc_salary(int inc)
+        {
+            salary+=inc;
+        }
+        public void dec_salary(int dec)
+        {
+            salary-=dec;
+        }
+        public int Get_id()
+        {
+            return id;
+        }
+        public int Get_salary()
+        {
+            return salary;
+        }
+        public string Get_name()
+        {
+            return name;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee ob=new Employee();
+            ob.Set_id(111);
+            ob.Set_name("Shrouk");
+            ob.Set_salary(5000);
+            Console.WriteLine(ob.Get_name()+" ,"+ob.Get_salary()+" ,"+ob.Get_id());
+            ob.inc_salary(1000);
+            Console.WriteLine(ob.Get_name()+" ,"+ob.Get_salary()+" ,"+ob.Get_id());
+            ob.dec_salary(500);
+            Console.WriteLine(ob.Get_name()+" ,"+ob.Get_salary()+" ,"+ob.Get_id());
+            ob=new Employee();// new ob 
+            ob.Set_salary(3000);
+            ob.Set_id(222);
+            ob.Set_name("Shahd");
+            Console.WriteLine(ob.Get_name()+" ,"+ob.Get_salary()+" ,"+ob.Get_id());
+        }
+    }
+}
