@@ -1,5 +1,5 @@
 using System;
-namespace Oop_lec2_part2
+namespace Oop_lec2_part3
 {
     class Employee
     {
