@@ -1,0 +1,105 @@
+using System;
+namespace Oop_lec2
+{
+    class Student
+    {
+        int id;
+        int total;
+        string name;
+        string eval;
+        ////////////
+        public Student()
+        {
+            id=1;
+            name="un known";
+            eval="un known";
+            total=0;
+        }
+        public Student(int i,int t,string n)
+        {
+            id=i;
+            total=t;
+            name=n;
+            eval="un known";
+        }
+        public int ID
+        {
+            set{id=value;}
+            get{return id;}
+        }
+        public int Total
+        {
+            set{total=value;}
+        }
+        public string Name
+        {
+            set{name=value;}
+            get{return name;}
+        }
+        public string Calc_Eval()
+        {
+            if(total<=100&&total>=85)
+            {
+                eval="Excellent";
+            }
+            else if(total<=84&&total>=75)
+            {
+                eval="Very good";
+            }
+            else if(total<=74&&total>=70)
+            {
+                eval="Good";
+            }
+            else if(total<=69&&total>=60)
+            {
+                eval="Acceptable";
+            }
+            else
+            {
+                eval="Fail";
+            }
+            return eval;
+        }
+        public void Print_Data()
+        {
+            Console.WriteLine("id= "+id+", name= "+name+", total= "+total+", eval= "+Calc_Eval());
+        }
+    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student s1=new Student();
+            Student s2=new Student();
+            Student s3=new Student();
+            /////////////////
+            Console.Write("Enter ID of s1: ");
+            s1.ID=int.Parse(Console.ReadLine());
+            Console.Write("Enter Name of s1: ");
+            s1.Name=Console.ReadLine();
+            Console.Write("Enter Total of s1: ");
+            s1.Total=int.Parse(Console.ReadLine());
+            Console.Write("Data of s1: ");
+            s1.Print_Data();
+            /////////////////
+            Console.Write("Enter ID of s2: ");
+            s2.ID=int.Parse(Console.ReadLine());
+            Console.Write("Enter Name of s2: ");
+            s2.Name=Console.ReadLine();
+            Console.Write("Enter Total of s2: ");
+            s2.Total=int.Parse(Console.ReadLine());
+            Console.Write("Data of s2: ");
+            s2.Print_Data();
+            ////////////////
+            Console.Write("Enter ID of s3: ");
+            s3.ID=int.Parse(Console.ReadLine());
+            Console.Write("Enter Name of s3: ");
+            s3.Name=Console.ReadLine();
+            Console.Write("Enter Total of s3: ");
+            s3.Total=int.Parse(Console.ReadLine());
+            Console.Write("Data of s3: ");
+            s3.Print_Data();
+        }
+    }
+}
